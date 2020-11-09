@@ -22,7 +22,7 @@ def feature_extractor():
 	net = C3D(487)
 	print('net', net)
 	## Loading pretrained model from sports and finetune the last layer
-	net.load_state_dict(torch.load('/data1/miayuan/pretrained_models/c3d.pickle'))
+	net.load_state_dict(torch.load('c3d.pickle'))
 	if RUN_GPU : 
 		net.cuda(0)
 		net.eval()
